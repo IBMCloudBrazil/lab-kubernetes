@@ -72,3 +72,18 @@ docker images
 ```
 docker rmi couchdb
 ```
+
+15. Execute o comando **docker ps** com a sinalização **-a** para que ele exiba também os containers que foram parados.
+```
+docker ps -a --filter "label=lab"
+```
+
+16. Remova completamente os containers com o comando *rm* utilizando os IDs listados no comando anterior.
+```
+docker rm <CONTAINER_ID>
+```
+
+17. Remova a imagem
+```
+docker rmi couchdb
+```
