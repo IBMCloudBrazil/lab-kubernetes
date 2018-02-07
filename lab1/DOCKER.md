@@ -1,4 +1,4 @@
-#Laboratório 1.1 Docker
+# Laboratório 1.1 Docker
 
 1. Abra um terminal e confirme que você tem o docker instalado através do comando:
 ```
