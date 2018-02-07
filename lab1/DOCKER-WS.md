@@ -10,17 +10,22 @@ docker pull websphere-liberty
 docker images
 ```
 
-3. Rode o comando a seguir para verificar quanto 
+3. Rode o comando a seguir para verificar quanto sua máquina está consumindo de CPU.
 ```
 uptime
 ```
 
-4. Com esse comando 
+4. Com esse comando você irá criar 5 instâncias do Websphere Liberty
 ```
-for i in 80 81 82 83 84; do docker run -d -p $i:9080  websphere-liberty:webProfile7 ; done
+for i in 80 81 82 83 84; do docker run -l lab -d -p $i:9080  websphere-liberty:webProfile7 ; done
 ```
 
 5. Rode o comando a seguir para verificar quanto 
+```
+uptime
+```
+
+6. Rode novamente o comando para verificar o consumo de CPU e observe que a carga foi pequena.
 ```
 uptime
 ```
