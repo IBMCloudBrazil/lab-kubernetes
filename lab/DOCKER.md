@@ -37,14 +37,17 @@ docker ps --filter "label=lab"
 docker run -l lab -d couchdb
 ```
 
-8. Observe que agora o comando *docker ps* irá apresentar dois containers diferentes em execução, baseados na mesma imagem.
+8. Observe que agora o comando **docker ps** irá apresentar dois containers diferentes em execução, baseados na mesma imagem.
 ```
 docker ps --filter "label=lab"
 ```
 
-9. Agora vamos interromper a execução do último container criado. Copie o CONTAINER ID apresentado no comando anterior para o último container, e substitua ele no comando abaixo:
+9. Agora vamos interromper a execução do último container criado. Copie o **CONTAINER ID** apresentado no comando anterior para o último container, e substitua ele no comando abaixo:
 ```
 docker stop <CONTAINER ID>
 ```
 Exemplo:
-docker stop b0512af341c7
+
+>docker stop **b0512af341c7**
+
+
