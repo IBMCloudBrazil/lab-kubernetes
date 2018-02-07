@@ -46,7 +46,8 @@ docker ps --filter "label=lab"
 ```
 docker stop <CONTAINER ID>
 ```
-Exemplo: >docker stop **b0512af341c7**
+Exemplo: 
+>docker stop **b0512af341c7**
 
 10. Execute novamento o comando **docker ps** e note que apenas 1 container será exibido.
 ```
