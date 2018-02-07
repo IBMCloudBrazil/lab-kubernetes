@@ -50,4 +50,26 @@ Exemplo:
 
 >docker stop **b0512af341c7**
 
+10. Execute novamento o comando **docker ps** e note que apenas 1 container será exibido.
+```
+docker ps --filter "label=lab"
+```
 
+11. Interrompa a execução do container restante, copiando **CONTAINER ID** apresentado no comando anterior e executando o comando **stop**
+```
+docker stop <CONTAINER ID>
+```
+12. Verifique os containers criados nesse lab já não estão mais em execução.
+```
+docker ps --filter "label=lab"
+```
+
+13. Agora liste todas as imagens disponveis localmente através do comando **images** e encontre uma imagem do **couchdb**
+```
+docker images
+```
+
+14. Tente remover a imagem do **couchdb** e observe que não é possível pois ainda há referências à ela.
+```
+docker rmi couchdb
+```
