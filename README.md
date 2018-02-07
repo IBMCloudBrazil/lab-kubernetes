@@ -1,5 +1,5 @@
 # Laboratórios Kubernetes
 
-[Lab 1 Docker](labs/DOCKER.md)
+[Lab 1 Docker](lab/DOCKER.md)
 
-[Lab 2 Kubernetes](labs/KUBE.md)
+[Lab 2 Kubernetes](lab/KUBE.md)
