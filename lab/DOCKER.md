@@ -1,3 +1,5 @@
+#Laboratório 1.1 Docker
+
 1. Abra um terminal e confirme que você tem o docker instalado através do comando:
 ```
 docker -v
@@ -87,3 +89,5 @@ docker rm <CONTAINER_ID>
 ```
 docker rmi couchdb
 ```
+
+Próximo laboratório [Lab 1.2 Docker Websphere Liberty](DOCKER-WS.md)
