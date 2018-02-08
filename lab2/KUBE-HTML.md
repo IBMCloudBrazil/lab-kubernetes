@@ -34,6 +34,7 @@ kubectl describe configmap nginx-config
 ```
 
 4. Crie um arquivo para descrever o deployment dessa página no Kubernetes
+
 ```
 cat > intro-app.yaml <<EOF
 apiVersion: apps/v1beta1
