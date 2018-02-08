@@ -1,6 +1,7 @@
 # Laboratório 2.1 Kubernetes Página HTML
 
 1. Crie uma página
+
 ```
 cat > intro.html <<EOF
 <html>
@@ -79,3 +80,13 @@ EOF
 kubectl create -f intro-app.yaml
 ```
 
+6. Abra o navegador e acesse a página inicial do IBM Cloud Private
+```
+https://192.169.169.20:8443/console/
+```
+
+7. Clique no menu lateral, selecione **Network Access --> Services **
+
+8. Procure o serviço **intro-app** e clique nele
+
+9. Nos detalhes do serviço clique no link da **Node Port** e uma nova janela será aberta com a aplicação implantada.
