@@ -44,3 +44,23 @@ docker ps --filter "label=lab"
 ```
 docker stop <CONTAINER_ID>
 ```
+
+11. Nessa parte vamos fazer o deploy de uma aplicação de exemplo no Liberty. Comece criando um novo diretório e um arquivo vazio chamado Dockerfile
+```
+mkdir JavaSample
+cd JavaSample
+touch Dockerfile
+```
+
+12. Abra o arquivo **Dockerfile** com o seu editor de texto preferido.
+```
+gedit Dockerfile
+```
+
+13. Copie o conteúdo abaixo para o arquivo e salve ele.
+```
+FROM websphere-liberty:webProfile7
+ADD JavaHelloWorldApp.war
+```
+
+14. Execute o comando abaixo para fazer o download de uma aplicaçã
