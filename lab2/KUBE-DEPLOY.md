@@ -1,73 +1,73 @@
 
-#Overview
+# Visão geral
 
-Use kubectl explain to see available keys/fields for a deployment manifest.
+Use o kubectl para ver as chaves / campos disponíveis para um manifesto de implantação.
 ```
 kubectl explain deployment --recursive=true
 kubectl explain deployment.spec.template --recursive=true
 ```
 
-Create a deployment to bring up 3 “whoami” pods.
+Crie uma implantação para criar 3 "whoami" pods.
 ```
 kubectl run whoami --image quay.io/john_mckenzie/hello-whoami:2 --image-pull-policy Always --port 80 --replicas 3
 ```
 
-#Deployment
+# Deployment (Implantação)
 
-Once the Deployment is created, view the status of the Rollout.
+Uma vez que a Implantação é criada, veja o status do Rollout.
 ```
 kubectl rollout status deployment/whoami
 ```
 
-View the basic information for the Deployment resource.
+Veja as informações básicas para o recurso de implantação.
 ```
 kubectl get deployment whoami -o wide
 ```
 
-Next, view the detail for the Deployment resource, notice the ReplicaSet that was created.
+Em seguida, veja o detalhe do recurso de implantação, observe o ReplicationSet que foi criado.
 ```
 kubectl describe deployment whoami
 ```
 
-View the manifest for the Deployment resource.
+Veja o manifesto para o recurso de implantação.
 ```
 kubectl get deployment whoami -o yaml
 ```
 
-#ReplicaSet
+# ReplicaSet
 
-View the basic information for the ReplicaSet resource that was created by the deployment.
+Veja as informações básicas para o recurso ReplicaSet que foi criado pela implantação.
 ```
 kubectl get replicaset -l run=whoami -o wide
 ```
 
-Next, view the detail for the ReplicaSet resource, notice the pods that were created.
+Em seguida, veja os detalhes para o recurso ReplicaSet, observe os pods que foram criados.
 ```
 kubectl describe replicaset -l run=whoami
 ```
 
-Finally, view the manifest for the ReplicaSet resource.
+Finalmente, ver o manifesto para o recurso ReplicaSet.
 ```
 kubectl get replicaset -l run=whoami -o yaml
 ```
 
-#Pods
+# Pods
 
-View the Pods that were created by the deployment.
+Veja os Pods que foram criados pela implantação.
 ```
 kubectl get pods -o wide -l run=whoami --show-labels
 ```
 
-Run a separate pod to access the nginx pods via the cluster IP address.
+Execute um pod separado para acessar os canais nginx através do endereço IP do cluster.
 ```
-kubectl run busybox --rm -it --image busybox
+kubectl run alpine --rm -it --image alpine
 ```
 
-Wait for the command prompt and attempt to access the Pods.
+Aguarde o prompt de comando e tente acessar os Pods.
 
 ```
 ping -c 3 <POD IP>
 wget -qO - http://<POD IP>
 ```
 
-Leave this deployment running, as we will use it in the following exercises.
+Deixe esta implantação em execução, pois a utilizaremos nos seguintes exercícios.
