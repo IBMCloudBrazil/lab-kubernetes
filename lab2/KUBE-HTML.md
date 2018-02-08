@@ -1,6 +1,6 @@
 # Laboratório 2.1 Kubernetes Página HTML
 
-1. Crie uma página HMTL
+1. Crie uma página
 ```
 cat > intro.html <<EOF
 <html>
