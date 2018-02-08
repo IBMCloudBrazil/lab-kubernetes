@@ -4,4 +4,6 @@
 
 [Lab 1.2 Docker Websphere Liberty](lab1/DOCKER-WS.md)
 
-[Lab 2 Kubernetes Página HMTL](lab2/KUBE-HTML.md)
+[Lab 2.1 Kubernetes Página HMTL](lab2/KUBE-HTML.md)
+
+[Lab 2.2 Kubernetes Deployments](lab2/KUBE-DEPLOY.md)
