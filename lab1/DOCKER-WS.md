@@ -63,4 +63,22 @@ FROM websphere-liberty:webProfile7
 ADD JavaHelloWorldApp.war
 ```
 
-14. Execute o comando abaixo para fazer o download de uma aplicaçã
+14. Execute o comando abaixo para fazer o download de uma aplicação de exemplo.
+```
+curl https://raw.githubusercontent.com/IBM-Cloud/java-helloworld/master/target/JavaHelloWorldApp.war >> JavaHelloWorldApp.war
+```
+
+15. Com esse comando você irá construir uma nova imagem Docker baseada no arquivo Dockerfile.
+```
+docker build -t app .
+```
+
+16. O comando abaixo executa um container baseado na imagem criada.
+```
+docker run -d -p 9985:9080 app
+```
+
+17. Abra um navegador e digite a URL http://localhost:9985/JavaHelloWorldApp/
+
+Pronto! Você concluiu com sucesso o laboratório 1.
+Voltar ao início [Laboratórios](../README.md)
